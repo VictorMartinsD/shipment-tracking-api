@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { verify } from "jsonwebtoken";
+import pkg from "jsonwebtoken";
+const { verify } = pkg;
 import { authConfig } from "@/configs/auth.js";
 import { AppError } from "@/utils/AppError.js";
 
