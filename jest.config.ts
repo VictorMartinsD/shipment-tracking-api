@@ -4,12 +4,14 @@ const config: Config = {
   bail: true,
   clearMocks: true,
   coverageProvider: "v8",
-  preset: "ts-jest",
+  preset: "ts-jest/presets/default-esm",
   testEnvironment: "node",
   testMatch: ["<rootDir>/src/**/*.test.ts"],
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1",
+    "^@/(.*)\\.js$": "<rootDir>/src/$1.ts",
+    "^(\\.{1,2}/.*)\\.js$": "$1",
   },
+  moduleFileExtensions: ["ts", "js", "json", "node"],
 };
 
 export default config;
