@@ -1,6 +1,6 @@
 import { createServer } from "node:http";
-
 import { app } from "@/app.js";
+import { env } from "./env.js";
 
 const port = Number(process.env.PORT) || 3333;
 const server = createServer(app);
