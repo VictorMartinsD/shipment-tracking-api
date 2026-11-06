@@ -4,13 +4,12 @@
     "lib": ["ES2024"],
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "types": ["node", "express"],
+    "types": ["node", "express", "jest"],
 
     "paths": {
       "@/*": ["./src/*"]
     },
 
-    "rootDir": "./src",
     "outDir": "./dist",
     "noEmit": false,
 
@@ -26,5 +25,6 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "skipLibCheck": true
-  }
+  },
+  "include": ["src/**/*", "jest.config.ts"]
 }
