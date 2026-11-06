@@ -1,8 +1,13 @@
 import request from "supertest";
+import { prisma } from "@/database/prisma.js";
 import { app } from "@/app.js";
 
 describe("SessionsController", () => {
   let user_id: string;
+
+  afterAll(async () => {
+    await prisma.user.delete({ where: { id: user_id } });
+  });
 
   it("should authenticate a and get acess token", async () => {
     const userResponse = await request(app).post("/users").send({
