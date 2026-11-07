@@ -6,11 +6,14 @@
   "description": "API de logística e rastreamento de entregas desenvolvida com Node.js, contendo controle de acesso por perfis (RBAC), gestão de status de pedidos e rastreabilidade de movimentações.",
   "type": "module",
   "main": "dist/server.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "tsx watch --env-file .env src/server.ts",
     "test:dev": "set NODE_OPTIONS=--experimental-vm-modules && npx jest --watchAll --runInBand",
-    "build": "tsup src --out-dir build",
-    "start": "node dist/server.js",
+    "build": "tsup src --out-dir build --format esm",
+    "start": "node build/server.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "echo \"No tests configured\"",
