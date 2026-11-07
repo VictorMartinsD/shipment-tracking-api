@@ -20,7 +20,7 @@ collection:
         meta:
           id: req_a100d3185f9f490baad0ee1d32a47d92
           created: 1793739383124
-          modified: 1793973638012
+          modified: 1794091360876
           isPrivate: false
           description: ""
           sortKey: -1793739383124
@@ -29,8 +29,8 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"name": "Ana",
-            	"email": "ana@email.com",
+            	"name": "Maria",
+            	"email": "maria@email.com",
             	"password": "123456"
             }
         headers:
@@ -62,7 +62,7 @@ collection:
         meta:
           id: req_fdf7448f703640f2976c92e4448b5805
           created: 1793893845550
-          modified: 1793973660828
+          modified: 1794091371496
           isPrivate: false
           description: ""
           sortKey: -1793893845550
@@ -103,7 +103,7 @@ collection:
         meta:
           id: req_dfc113936e99470d8da2422a3cb7fbb2
           created: 1793911193432
-          modified: 1793974941556
+          modified: 1794085704336
           isPrivate: false
           description: ""
           sortKey: -1793911193432
@@ -112,7 +112,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"user_id": "1de8fab8-fe29-4132-8585-aec9a38581dc",
+            	"user_id": "1c062a95-146f-47d7-be79-42cd5a802637",
             	"description": "Monitor 4k"
             }
         headers:
@@ -154,12 +154,12 @@ collection:
             store: true
           rebuildPath: true
       - url: "{{ _.BASE_URL }}/{{ _.RESOURCE
-          }}/19560e80-17a3-4741-a40a-2ef0a6ad0141/status"
+          }}/29ebaaf6-6bd3-4827-a4dd-69a7a8fdf88e/status"
         name: Status Update
         meta:
           id: req_f5798d65ff954e828a3241308d6b8398
           created: 1793918244383
-          modified: 1793975127289
+          modified: 1794084781057
           isPrivate: false
           description: ""
           sortKey: -1793918244383
@@ -168,7 +168,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"status": "delivered"
+            	"status": "shipped"
             }
         headers:
           - name: Content-Type
@@ -203,7 +203,7 @@ collection:
         meta:
           id: req_15e47c79850b44c78de287f1717c85da
           created: 1793919759286
-          modified: 1793975043392
+          modified: 1794059636208
           isPrivate: false
           description: ""
           sortKey: -1793919759286
@@ -212,8 +212,8 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"delivery_id": "19560e80-17a3-4741-a40a-2ef0a6ad0141",
-            	"description": "O pedido foi coletado"
+            	"delivery_id": "35fbf45e-3920-488a-bbaa-ceb0dcfba337",
+            	"description": "O pedido está a caminho"
             }
         headers:
           - name: Content-Type
@@ -231,12 +231,12 @@ collection:
             store: true
           rebuildPath: true
       - url: "{{ _.BASE_URL }}/{{ _.RESOURCE
-          }}/19560e80-17a3-4741-a40a-2ef0a6ad0141/show"
+          }}/29ebaaf6-6bd3-4827-a4dd-69a7a8fdf88e/show"
         name: Index
         meta:
           id: req_d7069897d7244031bd0a91766cb89bab
           created: 1793973453878
-          modified: 1793975023008
+          modified: 1794084794340
           isPrivate: false
           description: ""
           sortKey: -1793973453878
@@ -282,3 +282,13 @@ environments:
       data:
         BASE_URL: http://localhost:3333
       color: "#1ddd2a"
+    - name: prod
+      meta:
+        id: env_c1dfb4b2999346dc982c711f4b4343c3
+        created: 1794057534792
+        modified: 1794057716809
+        isPrivate: false
+        sortKey: 1794057534792
+      data:
+        BASE_URL: https://shipment-tracking-api-eb8r.onrender.com
+      color: "#ff0000"
